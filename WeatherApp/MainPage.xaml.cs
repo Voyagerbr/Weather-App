@@ -2,23 +2,27 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	Results resultado;
 
 	public MainPage()
 	{
+		
 		InitializeComponent();
+		resultado = new Results();
+	
+		Testing();	
+		FIllPage();
 	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
+	void Testing(){
+		resultado = new Results();
+		resultado.rain = 10;
+	}
+	void FIllPage()
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		RainLabel.Text = resultado.rain.ToString();
+		
 	}
+
+	
 }
 
