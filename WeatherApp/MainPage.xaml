@@ -9,7 +9,7 @@
     <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
-        <RowDefinition Height="250"/>
+        <RowDefinition Height="150"/>
     </Grid.RowDefinitions>
     
     <Grid.ColumnDefinitions>
@@ -17,14 +17,21 @@
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
-<image x:Name = ""/>
+<Image x:Name = "BgImg"
+        Grid.RowSpan="3"
+        Grid.ColumnSpan="3"
+        Aspect="AspectFill"/>
 
     <Frame
     Grid.Row="0"
-    Grid.RowSpan="2"
     Grid.Column="0"
-    BackgroundColor="#ffcabfbf"
-    VerticalOptions="Center">
+    Margin="3"
+    Padding="0"
+    Grid.ColumnSpan="3"
+    HeightRequest="150"
+
+    BackgroundColor="#cccabfbf"
+    VerticalOptions="End">
         <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -35,12 +42,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
         <Label Text = "Chuva:"
                 TextColor="Black"
-                HeightRequest="60"
-                WidthRequest="60"
                 Grid.Row = "0"
                 Grid.Column = "0"/>
 
@@ -51,28 +57,51 @@
         
         </Grid>
     </Frame>
+    
+    <Frame
+    Grid.Row="1"
+    Grid.Column="0"
+    HeightRequest="100"
+    Margin="3"
+    Padding="0"
+    BackgroundColor="#cccabfbf"
+    VerticalOptions="Start">
+    </Frame>
 
     <Frame
     Grid.Row="1"
-
-    Grid.Column="0"
-    BackgroundColor="#ffcabfbf"
-    VerticalOptions="Center">
-        <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-    
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
-        
-        </Grid>
+    Grid.Column="1"
+    HeightRequest="100"
+    Margin="3"
+    Padding="0"
+    BackgroundColor="#cccabfbf"
+    VerticalOptions="Start">
     </Frame>
+
+    <Frame
+    Grid.Row="1"
+    Margin="3"
+    Padding="0"
+    Grid.Column="2"
+    HeightRequest="100"
+    BackgroundColor="#cccabfbf"
+    VerticalOptions="Start">
+    </Frame>
+
+    <Frame
+    Grid.Row="2"
+    Grid.Column="0"
+    Grid.ColumnSpan="3"
+    Margin="7"
+    Padding="0"
+    HeightRequest="150"
+    BackgroundColor="#aacabfbf"
+    VerticalOptions="End">
+    </Frame>
+
+
+
+
    
    
    

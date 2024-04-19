@@ -15,11 +15,27 @@ public partial class MainPage : ContentPage
 	}
 	void Testing(){
 		resultado = new Results();
-		resultado.rain = 10;
+		resultado.Rain = 10;
+		resultado.Currently = "dia";
+		resultado.Cloudness = 11;
 	}
 	void FIllPage()
 	{
-		RainLabel.Text = resultado.rain.ToString();
+		
+		RainLabel.Text = resultado.Rain.ToString();
+
+		if(resultado.Currently == "dia")
+		{
+			if(resultado.Rain >= 10)
+			{
+				BgImg.Source = "rainyday.png";
+			}
+			if (resultado.Cloudness >= 10)
+			{
+				BgImg.Source = "cloudyday.png";
+			}
+
+		}
 		
 	}
 
