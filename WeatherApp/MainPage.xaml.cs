@@ -3,7 +3,8 @@
 public partial class MainPage : ContentPage
 {
 	Results resultado;
-
+	const string Url="https://api.hgbrasil.com/weather?woeid=455963&Key=3c51ec7f";
+	
 	public MainPage()
 	{
 		
@@ -15,22 +16,28 @@ public partial class MainPage : ContentPage
 	}
 	void Testing(){
 		resultado = new Results();
-		resultado.Rain = 10;
-		resultado.Currently = "dia";
-		resultado.Cloudness = 11;
+		resultado.rain = 10;
+		resultado.currently = "dia";
+		resultado.cloudness = 11;
+		resultado.city = "Itu, SP";
+		resultado.temp = 23;
+		resultado.description = "Tempo Nublado";
 	}
 	void FIllPage()
 	{
 		
-		RainLabel.Text = resultado.Rain.ToString();
+		TempLabel.Text = resultado.temp.ToString();
+		CityLabel.Text = resultado.city;
+		DescriptionLabel.Text = resultado.description;
 
-		if(resultado.Currently == "dia")
+
+		if(resultado.currently == "dia")
 		{
-			if(resultado.Rain >= 10)
+			if(resultado.rain >= 10)
 			{
 				BgImg.Source = "rainyday.png";
 			}
-			if (resultado.Cloudness >= 10)
+			if (resultado.cloudness >= 10)
 			{
 				BgImg.Source = "cloudyday.png";
 			}

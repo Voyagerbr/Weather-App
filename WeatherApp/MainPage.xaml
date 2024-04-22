@@ -8,18 +8,18 @@
 <Grid>
     <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="100"/>
         <RowDefinition Height="150"/>
     </Grid.RowDefinitions>
     
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
         <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 <Image x:Name = "BgImg"
-        Grid.RowSpan="3"
-        Grid.ColumnSpan="3"
+        Grid.RowSpan="4"
+        Grid.ColumnSpan="2"
         Aspect="AspectFill"/>
 
     <Frame
@@ -28,7 +28,7 @@
     Margin="3"
     Padding="0"
     Grid.ColumnSpan="3"
-    HeightRequest="150"
+    HeightRequest="120"
 
     BackgroundColor="#cccabfbf"
     VerticalOptions="End">
@@ -36,23 +36,42 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
     
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        <Label Text = "Chuva:"
+        <!-- Temperatura -->
+        <Label x:Name="TempLabel"
                 TextColor="Black"
+                Grid.Row = "0"
+                Grid.RowSpan="2"
+                FontSize="70"
+                Grid.Column = "0"
+                 HorizontalOptions="StartAndExpand"/>
+
+        <Label  Text="°C"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                FontSize="22"
                 Grid.Row = "0"
                 Grid.Column = "0"/>
-
-        <Label  x:Name="RainLabel"
+            <!-- Descrição -->
+        <Label x:Name="DescriptionLabel"
                 TextColor="Black"
+                FontSize="22"
                 Grid.Row = "0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column = "1"/>
+                <!-- Cidade -->
+        <Label x:Name="CityLabel"
+                TextColor="Black"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row = "1"
                 Grid.Column = "1"/>
         
         </Grid>
@@ -61,40 +80,66 @@
     <Frame
     Grid.Row="1"
     Grid.Column="0"
-    HeightRequest="100"
+    HeightRequest="90"
     Margin="3"
     Padding="0"
     BackgroundColor="#cccabfbf"
     VerticalOptions="Start">
+    
+     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+    
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    
+        
+        </Grid>
     </Frame>
 
     <Frame
     Grid.Row="1"
     Grid.Column="1"
-    HeightRequest="100"
+    HeightRequest="90"
     Margin="3"
     Padding="0"
     BackgroundColor="#cccabfbf"
     VerticalOptions="Start">
     </Frame>
 
+
     <Frame
-    Grid.Row="1"
+    Grid.Row="2"
+    Grid.Column="0"
+    HeightRequest="90"
     Margin="3"
     Padding="0"
-    Grid.Column="2"
-    HeightRequest="100"
     BackgroundColor="#cccabfbf"
     VerticalOptions="Start">
     </Frame>
 
     <Frame
     Grid.Row="2"
+    Grid.Column="1"
+    HeightRequest="90"
+    Margin="3"
+    Padding="0"
+    BackgroundColor="#cccabfbf"
+    VerticalOptions="Start">
+    </Frame>
+
+
+    <Frame
+    Grid.Row="3"
     Grid.Column="0"
     Grid.ColumnSpan="3"
-    Margin="7"
+    Margin="5"
     Padding="0"
-    HeightRequest="150"
+    HeightRequest="120"
     BackgroundColor="#aacabfbf"
     VerticalOptions="End">
     </Frame>

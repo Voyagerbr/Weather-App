@@ -2,21 +2,21 @@ namespace WeatherApp;
 
 public partial class Results
 {
-            public int Rain {get; set;}
-            public int Temp {get; set;}
-            public int Sunrise {get; set;} 
-            public int Sunset {get; set;} 
-            public int Date {get; set;}
-            public int Time {get; set;} 
-            public string Description {get; set;} 
-            public string Currently {get; set;} 
-            public string City {get; set;} 
-            public int Humidity {get; set;} 
-            public double Cloudness {get; set;}
-            public double WindSpeedy {get; set;} 
-            public string WindCardinal {get; set;} 
-            public int Condition_code {get; set;} 
-            public string MoonPhase {get; set;} 
+            public int rain {get; set;}
+            public int temp {get; set;}
+            public int sunrise {get; set;} 
+            public int sunset {get; set;} 
+            public int date {get; set;}
+            public int time {get; set;} 
+            public string description {get; set;} 
+            public string currently {get; set;} 
+            public string city {get; set;} 
+            public int humidity {get; set;} 
+            public double cloudness {get; set;}
+            public double wind_speedy {get; set;} 
+            public string wind_cardinal {get; set;} 
+            public int condition_code {get; set;} 
+            public string moon_phase {get; set;} 
 
     
     public Results()
