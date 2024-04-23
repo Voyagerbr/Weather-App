@@ -1,6 +1,6 @@
 namespace WeatherApp;
 
-public partial class Results
+public class Results
 {
             public int rain {get; set;}
             public int temp {get; set;}
