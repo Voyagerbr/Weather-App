@@ -44,7 +44,7 @@ public partial class MainPage : ContentPage
 		DescriptionLabel.Text = resposta.results.description;
 		RainLabel.Text = resposta.results.rain.ToString();
 		HumidityLabel.Text = resposta.results.humidity.ToString();
-		WindSpeedyLabel.Text = resposta.results.wind_speedy.ToString();
+		WindSpeedyLabel.Text = resposta.results.wind_speedy;
 		WindCardinalLabel.Text = resposta.results.wind_cardinal;
 		SunriseLabel.Text = resposta.results.sunrise;
 		SunsetLabel.Text = resposta.results.sunset;
@@ -52,37 +52,37 @@ public partial class MainPage : ContentPage
 		
 
 
-		if(results.currently == "dia")
+		if (resposta.results.currently == "dia")
 		{
-			if(results.rain >= 1)
+			if(resposta.results.rain >= 1)
 			{
 				BgImg.Source = "rainyday.png";
 			}
-			else if (results.cloudness >= 1)
+			else if (resposta.results.cloudness >= 1)
 			{
 				BgImg.Source = "cloudyday.png";
 			}
 			else 
 			{
-				BgImg.Source = "cleanday";
+				BgImg.Source = "cleanday.png";
 			}
 		}
 		else
 		{
-			if(results.rain >= 1)
+			if(resposta.results.rain >= 1)
 			{
 				BgImg.Source = "rainynight.png";
 
 				
 			}
 
-			else if (results.cloudness >= 1)
+			else if (resposta.results.cloudness >= 1)
 			{
 				BgImg.Source = "cloudynight.png";
 			}
 			else 
 			{
-				BgImg.Source = "cleannight";
+				BgImg.Source = "cleannight.png";
 			}
 
 		}

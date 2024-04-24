@@ -12,14 +12,11 @@ public class Results
             public string currently {get; set;} 
             public string city {get; set;} 
             public double cloudness {get; set;}
-            public int wind_speedy {get; set;} 
+            public string wind_speedy {get; set;} 
             public string wind_cardinal {get; set;} 
             public string condition_code {get; set;} 
             public string moon_phase {get; set;} 
 
     
-    public Results()
-    {
-
-    }
+  
 }
