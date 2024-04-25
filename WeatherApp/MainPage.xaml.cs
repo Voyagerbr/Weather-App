@@ -54,11 +54,11 @@ public partial class MainPage : ContentPage
 
 		if (resposta.results.currently == "dia")
 		{
-			if(resposta.results.rain >= 1)
+			if(resposta.results.rain >= 10)
 			{
 				BgImg.Source = "rainyday.png";
 			}
-			else if (resposta.results.cloudness >= 1)
+			else if (resposta.results.cloudness >= 10)
 			{
 				BgImg.Source = "cloudyday.png";
 			}
@@ -69,14 +69,14 @@ public partial class MainPage : ContentPage
 		}
 		else
 		{
-			if(resposta.results.rain >= 1)
+			if(resposta.results.rain >= 10)
 			{
 				BgImg.Source = "rainynight.png";
 
 				
 			}
 
-			else if (resposta.results.cloudness >= 1)
+			else if (resposta.results.cloudness >= 10)
 			{
 				BgImg.Source = "cloudynight.png";
 			}
