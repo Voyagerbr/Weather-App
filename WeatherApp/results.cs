@@ -16,7 +16,7 @@ public class Results
             public string wind_cardinal {get; set;} 
             public string condition_code {get; set;} 
             public string moon_phase {get; set;} 
-
+            public List <Forecast> forecast {get; set;}
     
   
 }

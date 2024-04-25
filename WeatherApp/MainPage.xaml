@@ -27,6 +27,7 @@
     Grid.Column="0"
     Margin="3"
     Padding="0"
+    CornerRadius="30"
     Grid.ColumnSpan="3"
     HeightRequest="120"
 
@@ -79,6 +80,7 @@
     
     <Frame
     Grid.Row="1"
+    CornerRadius="30"
     Grid.Column="0"
     HeightRequest="90"
     Margin="3"
@@ -127,6 +129,7 @@
 
     <Frame
     Grid.Row="1"
+    CornerRadius="30"
     Grid.Column="1"
     HeightRequest="90"
     Margin="3"
@@ -186,6 +189,7 @@
 
     <Frame
     Grid.Row="2"
+    CornerRadius="30"
     Grid.Column="0"
     HeightRequest="90"
     Margin="3"
@@ -245,6 +249,7 @@
     <Frame
     Grid.Row="2"
     Grid.Column="1"
+    CornerRadius="30"
     HeightRequest="90"
     Margin="3"
     Padding="0"
@@ -291,6 +296,7 @@
 
 
     <Frame
+    CornerRadius="30"
     Grid.Row="3"
     Grid.Column="0"
     Grid.ColumnSpan="3"
@@ -299,15 +305,35 @@
     HeightRequest="120"
     BackgroundColor="#aacabfbf"
     VerticalOptions="End">
+        <CollectionView>
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                    ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="#FFF">
+                        <Grid>
+                           <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+    
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding min}"
+                                    Grid.Row="0"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Frame>
-
-
-
-
-   
-   
-   
-   
-</Grid>
+        
+    </Grid>
 
 </ContentPage>
