@@ -27,7 +27,7 @@
     Grid.Column="0"
     Margin="3"
     Padding="0"
-    CornerRadius="30"
+    CornerRadius="20"
     Grid.ColumnSpan="3"
     HeightRequest="120"
 
@@ -80,7 +80,7 @@
     
     <Frame
     Grid.Row="1"
-    CornerRadius="30"
+    CornerRadius="20"
     Grid.Column="0"
     HeightRequest="90"
     Margin="3"
@@ -129,7 +129,7 @@
 
     <Frame
     Grid.Row="1"
-    CornerRadius="30"
+    CornerRadius="20"
     Grid.Column="1"
     HeightRequest="90"
     Margin="3"
@@ -189,7 +189,7 @@
 
     <Frame
     Grid.Row="2"
-    CornerRadius="30"
+    CornerRadius="20"
     Grid.Column="0"
     HeightRequest="90"
     Margin="3"
@@ -249,7 +249,7 @@
     <Frame
     Grid.Row="2"
     Grid.Column="1"
-    CornerRadius="30"
+    CornerRadius="20"
     HeightRequest="90"
     Margin="3"
     Padding="0"
@@ -296,23 +296,24 @@
 
 
     <Frame
-    CornerRadius="30"
+    CornerRadius="20"
     Grid.Row="3"
     Grid.Column="0"
     Grid.ColumnSpan="3"
     Margin="5"
-    Padding="0"
-    HeightRequest="120"
+    HeightRequest="150"
     BackgroundColor="#aacabfbf"
     VerticalOptions="End">
-        <CollectionView>
+        <CollectionView x:Name="ForecastList">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Horizontal"
                                     ItemSpacing="10"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame BackgroundColor="#FFF">
+                    <Frame BackgroundColor="#FFF"
+                             CornerRadius="20"
+                             WidthRequest="150">
                         <Grid>
                            <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
@@ -324,9 +325,32 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-
-                            <Label Text="{Binding min}"
-                                    Grid.Row="0"/>
+                    
+                            <Label Text="{Binding date}"
+                                    Grid.Row="0"
+                                    Grid.ColumnSpan="2"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Center"/>
+                            <Label Text="Min:"
+                                    Grid.Row="1"
+                                    HeightRequest="20"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Center"/>        
+                            <Label Text="{Binding min, StringFormat='{0}° C'}"
+                                    Grid.Row="1"
+                                    HeightRequest="20"
+                                    Grid.Column="1"
+                                    HorizontalOptions="Center"/>
+                            <Label Text="Max:"
+                                    Grid.Row="2"
+                                    HeightRequest="20"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Center"/>
+                            <Label Text="{Binding max, StringFormat='{0}° C'}"
+                                    Grid.Row="2"
+                                    HeightRequest="20"
+                                    Grid.Column="1"
+                                    HorizontalOptions="Center"/>
                         </Grid>
                     </Frame>
                 </DataTemplate>

@@ -49,16 +49,17 @@ public partial class MainPage : ContentPage
 		SunriseLabel.Text = resposta.results.sunrise;
 		SunsetLabel.Text = resposta.results.sunset;
 		MoonPhaseLabel.Text = resposta.results.moon_phase;
+		ForecastList.ItemsSource = resposta.results.forecast;
 		
 
 
 		if (resposta.results.currently == "dia")
 		{
-			if(resposta.results.rain >= 10)
+			if(resposta.results.description == "Chuva")
 			{
 				BgImg.Source = "rainyday.png";
 			}
-			else if (resposta.results.cloudness >= 10)
+			else if (resposta.results.description == "Tempo nublado")
 			{
 				BgImg.Source = "cloudyday.png";
 			}
@@ -69,14 +70,14 @@ public partial class MainPage : ContentPage
 		}
 		else
 		{
-			if(resposta.results.rain >= 10)
+			if(resposta.results.description == "Chuva")
 			{
 				BgImg.Source = "rainynight.png";
 
 				
 			}
 
-			else if (resposta.results.cloudness >= 10)
+			else if (resposta.results.description == "Tempo nublado")
 			{
 				BgImg.Source = "cloudynight.png";
 			}
