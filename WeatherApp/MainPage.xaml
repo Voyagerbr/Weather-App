@@ -48,6 +48,7 @@
                 TextColor="Black"
                 Grid.Row = "0"
                 Grid.RowSpan="2"
+                Padding="19"
                 FontSize="70"
                 Grid.Column = "0"
                  HorizontalOptions="StartAndExpand"/>
@@ -319,7 +320,9 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
+
     
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
@@ -329,27 +332,46 @@
                             <Label Text="{Binding date}"
                                     Grid.Row="0"
                                     Grid.ColumnSpan="2"
+                                    TextColor="Black"
                                     HeightRequest="20"
                                     HorizontalOptions="Center"/>
                             <Label Text="Min:"
                                     Grid.Row="1"
+                                    TextColor="Black"
                                     HeightRequest="20"
                                     Grid.Column="0"
                                     HorizontalOptions="Center"/>        
                             <Label Text="{Binding min, StringFormat='{0}° C'}"
                                     Grid.Row="1"
                                     HeightRequest="20"
+                                    TextColor="Black"
                                     Grid.Column="1"
                                     HorizontalOptions="Center"/>
                             <Label Text="Max:"
                                     Grid.Row="2"
                                     HeightRequest="20"
                                     Grid.Column="0"
+                                    TextColor="Black"
                                     HorizontalOptions="Center"/>
                             <Label Text="{Binding max, StringFormat='{0}° C'}"
                                     Grid.Row="2"
                                     HeightRequest="20"
                                     Grid.Column="1"
+                                    TextColor="Black"
+                                    HorizontalOptions="Center"/>
+                           
+                            <Label Text="Chance Chuva:"
+                                    Grid.Row="3"
+                                    TextColor="Black"
+                                    HeightRequest="20"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Center"/>        
+
+                             <Label Text="{Binding rain_probability, StringFormat='{0}%'}"
+                                    Grid.Row="3"
+                                    HeightRequest="20"
+                                    Grid.Column="1"
+                                    TextColor="Black"
                                     HorizontalOptions="Center"/>
                         </Grid>
                     </Frame>
