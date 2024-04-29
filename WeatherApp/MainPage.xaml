@@ -51,7 +51,7 @@
                 Padding="19"
                 FontSize="70"
                 Grid.Column = "0"
-                 HorizontalOptions="StartAndExpand"/>
+                HorizontalOptions="StartAndExpand"/>
 
         <Label  Text="°C"
                 TextColor="Black"
@@ -102,6 +102,7 @@
     <Label Text="Chuva:"
             TextColor="Black"
             Grid.Row="0"
+            HorizontalOptions="Center"
             Grid.Column="0"
             FontSize="18"/>
     
@@ -109,20 +110,21 @@
             TextColor="Black"
             Grid.Row="0"
             Grid.Column="1"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             FontSize="18"/>    
     
     <Label Text="Humidade:"
             TextColor="Black"
             Grid.Row="1"
             Grid.Column="0"
+            HorizontalOptions="Center"
             FontSize="18"/>
     
     <Label x:Name="HumidityLabel"
             Grid.Row="1"
             Grid.Column="1"
             TextColor="Black"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             FontSize="18"/>    
        
         </Grid>
@@ -162,25 +164,27 @@
             Grid.Row="1"
             Grid.Column="0"
             TextColor="Black"
+            HorizontalOptions="Center"
             FontSize="18"/>
     
     <Label x:Name="WindSpeedyLabel"
             Grid.Row="1"
             Grid.Column="1"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             TextColor="Black"
             FontSize="18"/>    
     
     <Label Text="Direção:"
             Grid.Row="2"
             Grid.Column="0"
+            HorizontalOptions="Center"
             TextColor="Black"
             FontSize="18"/>
     
     <Label x:Name="WindCardinalLabel"
             Grid.Row="2"
             Grid.Column="1"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             TextColor="Black"
             FontSize="18"/>    
        
@@ -221,13 +225,14 @@
     <Label Text="Amanhecer :"
             Grid.Row="1"
             Grid.Column="0"
+            HorizontalOptions="Center"
             TextColor="Black"
             FontSize="18"/>
     
     <Label x:Name="SunriseLabel"
             Grid.Row="1"
             Grid.Column="1"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             TextColor="Black"
             FontSize="18"/>    
     
@@ -235,13 +240,14 @@
             Grid.Row="2"
             TextColor="Black"
             Grid.Column="0"
+            HorizontalOptions="Center"
             FontSize="18"/>
     
     <Label x:Name="SunsetLabel"
             Grid.Row="2"
             TextColor="Black"
             Grid.Column="1"
-            HorizontalOptions="Start"
+            HorizontalOptions="Center"
             FontSize="18"/>    
        
         </Grid>
@@ -280,6 +286,7 @@
     <Label Text="Fase:"
             Grid.Row="1"
             TextColor="Black"
+            HorizontalOptions="Center"
             Grid.Column="0"
             FontSize="18"/>
     
@@ -360,7 +367,7 @@
                                     TextColor="Black"
                                     HorizontalOptions="Center"/>
                            
-                            <Label Text="Chance Chuva:"
+                            <Label Text="Chuva:"
                                     Grid.Row="3"
                                     TextColor="Black"
                                     HeightRequest="20"

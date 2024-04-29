@@ -88,6 +88,19 @@ public partial class MainPage : ContentPage
 			}
 
 		}
+			if (resposta.results.moon_phase == "new")
+			{
+				MoonPhaseLabel.Text = "Nova";
+			}
+
+			else if (resposta.results.moon_phase == "waxing_crescent")
+			{
+				MoonPhaseLabel.Text = "Crescente";
+			}
+			else if (resposta.results.moon_phase == "first_quarter")
+			{
+				MoonPhaseLabel.Text = "Crescente";
+			}
 		
 	}
 
